@@ -6,7 +6,6 @@
   <title>Winn LIFF app</title>
 </head>
 <body>
-  <p id="aurl"></p>
   <audio controls autoplay>
     <source id="asrc" src="" type="audio/mp3">
   </audio>
@@ -16,15 +15,11 @@
     var url_string = window.location.href;
     var url = new URL(url_string);
     var aurl = url.searchParams.get("audiourl");
-
-    document.getElementById("aurl").innerHTML = aurl
     document.getElementById("asrc").src = aurl
     async function main() {
       await liff.init({ liffId: "1656656612-7DmnEE4l" })
     }
     main()
   </script>
-
-
 </body>
 </html>
