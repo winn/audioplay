@@ -6,10 +6,15 @@
   <title>Winn LIFF app</title>
 </head>
 <body>
-  <p>hello</p>
+  <p id="aurl"></p>
 
   <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
   <script>
+    var url_string = window.location.href
+    var url = new URL(url_string);
+    var aurl = url.searchParams.get("audiourl");
+
+    document.getElementById("aurl").append(aurl)
     async function main() {
       await liff.init({ liffId: "1656656612-7DmnEE4l" })
     }
