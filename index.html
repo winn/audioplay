@@ -7,6 +7,9 @@
 </head>
 <body>
   <p id="aurl"></p>
+  <audio controls autoplay>
+    <source id="asrc" src="" type="audio/mp3">
+  </audio>
 
   <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
   <script>
@@ -15,15 +18,13 @@
     var aurl = url.searchParams.get("audiourl");
 
     document.getElementById("aurl").innerHTML = aurl
-    document.getElementById("asrc").src= aurl
+    document.getElementById("asrc").src = aurl
     async function main() {
       await liff.init({ liffId: "1656656612-7DmnEE4l" })
     }
     main()
   </script>
-  <audio controls autoplay>
-    <source id="asrc" src="" type="audio/mp3">
-  </audio>
+
 
 </body>
 </html>
