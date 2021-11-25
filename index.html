@@ -14,6 +14,7 @@
   <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
   <script>
     var url_string = window.location.href;
+    url_string = url_string.replace("liff.state=%3F","");
     var url = new URL(url_string);
     var aurl = url.searchParams.get("audiourl");
     document.getElementById("aurl").innerHTML = url
