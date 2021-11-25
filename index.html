@@ -15,9 +15,9 @@
   <script>
     var url_string = window.location.href;
     url_string = url_string.replace("liff.state=%3F","");
-    url_string = url_string.replace("%3D","=");
-    url_string = url_string.replace("%253A",":");
-    url_string = url_string.replace("%252F","/");
+    url_string = url_string.replaceAll("%3D","=");
+    url_string = url_string.replaceAll("%253A",":");
+    url_string = url_string.replaceAll("%252F","/");
     var url = new URL(url_string);
     var aurl = url.searchParams.get("audiourl");
     document.getElementById("aurl").innerHTML = url
