@@ -16,7 +16,7 @@
     var url_string = window.location.href;
     var url = new URL(url_string);
     var aurl = url.searchParams.get("audiourl");
-    document.getElementById("aurl").innerHTML = aurl
+    document.getElementById("aurl").innerHTML = url
     document.getElementById("asrc").src = aurl
     // async function main() {
     //   await liff.init({ liffId: "1656651596-mJ6rzM1G" })
